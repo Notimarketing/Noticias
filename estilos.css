@@ -1,0 +1,1156 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: #053053;
+}
+
+/* Estilos para el submenú */
+.submenu {
+  display: none; /* Ocultar el submenú por defecto */
+  position: absolute; /* Posiciona el submenú con respecto al li principal */
+  left: 0;
+  top: 100%; /* Aparece justo debajo del li principal */
+  background-color: #053053; /* Fondo oscuro para el submenú */
+  min-width: 200px; /* Establece un ancho mínimo */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  z-index: 1000; /* Asegura que el submenú aparezca sobre otros elementos */
+}
+
+.submenu li {
+  width: 100%; /* Asegura que los enlaces ocupen todo el ancho del submenú */
+}
+
+.submenu a {
+  padding: 10px;
+  color: white; /* Color blanco para el texto */
+  text-align: left; /* Alineación a la izquierda */
+  display: block; /* Hace que los enlaces ocupen todo el ancho del submenú */
+  text-decoration: none; /* Elimina el subrayado por defecto */
+}
+
+.submenu a:hover {
+  background-color: #0c426f; /* Color de fondo al pasar el ratón */
+}
+
+/* Mostrar el submenú cuando el ratón pasa por encima del <li> principal */
+.menu li:hover .submenu {
+  display: block; /* Muestra el submenú */
+}
+
+/* Opcional: Agregar transición para un efecto suave */
+.submenu {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  visibility: hidden; /* Inicialmente invisible */
+}
+
+.menu li:hover .submenu {
+  visibility: visible; /* Se hace visible cuando el ratón pasa por encima */
+  opacity: 1; /* Se muestra con opacidad */
+}
+
+/* Añadir un pequeño margen entre los elementos del menú */
+.menu li {
+  position: relative; /* Necesario para que el submenú se posicione correctamente */
+  margin: 0 20px; /* Espaciado entre los elementos del menú */
+}
+
+
+.center-content {
+  margin-top: 50px; /* Espacio encima del nombre */
+  text-align: center ;
+  font-family: 'Times New Roman', Times, serif;
+  color: #053053;
+}
+
+.center-content h1 {
+  margin: 0; /* Elimina márgenes alrededor del nombre */
+  font-size: 36px; /* Ajusta el tamaño de la fuente */
+}
+
+.underline {
+  width: 100%; /* Ancho de la línea debajo del texto */
+
+  border: none;
+  border-top: 8px solid #ded6d6; /* Color y grosor de la línea */
+  margin-top: 10px; /* Espacio entre el nombre y la línea */
+  margin-bottom: 20px; /* Espacio debajo de la línea */
+  
+}
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+#logo {
+  width: 60%;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+}
+
+* { margin: 0; padding: 0; }
+.banner {
+  position: relative;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.banner img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 49% 48%;
+  gap: 5px;
+
+}
+
+.main-content,
+.sidebar,
+.Comentario,
+.video-section,
+.support-form,
+.support-info {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.sidebar4 {
+  text-align: left;
+}
+
+.main-content h2 {
+  text-align: center;
+}
+
+.sidebar-item {
+  text-align: center;
+  margin-bottom: 5x;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.sidebar-image {
+  width: 100%;
+  max-width: 250px;
+  border-radius: NONE;
+}
+
+.sidebar-comment {
+  font-size: 20px;
+  color: #040404;
+  margin-top: 10px;
+  text-align: justify;
+}
+.sidebar p {
+  text-align: justify;
+}
+
+.Comentario {
+  grid-column: 1 / 3;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Comentario .comment-box {
+  flex: 1;
+  margin: 10px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.video-section {
+  grid-column: 1 / 3;
+  background-color: #bcb5bd;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.video-section iframe {
+  width: 100%;
+  height: auto;
+}
+.video-course {
+  margin-top: 5px;
+}
+
+.video-course iframe {
+  width: 100%;
+  height: 500px;
+  padding: 10px;
+}
+.video-promo iframe {
+  width: 100%;
+  height: 300px;
+  padding: 10px;
+}
+
+.video-course p {
+  margin-top: 10px;
+  text-align: justify;
+  align-items: center;
+}
+.video-promo p {
+  margin-top: 10px;
+  text-align: justify;
+  align-items: center;
+}
+.centrar-titulo {
+  text-align: center;
+}
+
+.support-form {
+  grid-column: 1 / 3;
+  background-color: #ffffff;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+
+form label {
+  margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #053053;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+}
+
+form button:hover {
+  background-color: #073f6c;
+}
+
+.course-box,
+.info-box {
+  background-color: #ebebeb;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.course-box {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.course-text {
+  flex: 1;
+  text-align: justify;
+}
+
+.course-image {
+  width: 200px;
+  height: auto;
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .usuario-comments {
+    flex-direction: column;
+  }
+
+  .usuario-comments .comment-box {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .support-info {
+    grid-template-columns: 1fr;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  .video-section iframe {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.main-content p {
+  font-size: 1.1em;
+  line-height: 1.5;
+  color: #0d0d0d;
+  margin: 20px 0;
+  text-align: justify;
+}
+.main-content p strong {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #030303;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.sidebar-image1 {
+  max-width: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.sidebar-image2 {
+  max-width: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.sidebar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-image {
+  width: 50%;
+  margin-bottom: 50px;
+}
+
+.comment-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+.comment-box p {
+  font-size: 0.9em;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.comment-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.1em;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+h2 {
+  font-size: 1.1em;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+rating {
+  display: inline-block;
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  font-size: 2em;
+  color: #ddd;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.rating input:checked ~ label {
+  color: gold;
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+  color: gold;
+}
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.rating span {
+  font-size: 2em;
+  color: #ddd;
+  transition: color 0.3s;
+}
+
+.rating span:hover,
+.rating span:hover ~ span {
+  color: gold;
+}
+.rating[data-rating="1"] span[data-value="1"],
+.rating[data-rating="2"] span[data-value="1"],
+.rating[data-rating="2"] span[data-value="2"],
+.rating[data-rating="3"] span[data-value="1"],
+.rating[data-rating="3"] span[data-value="2"],
+.rating[data-rating="3"] span[data-value="3"],
+.rating[data-rating="4"] span[data-value="1"],
+.rating[data-rating="4"] span[data-value="2"],
+.rating[data-rating="4"] span[data-value="3"],
+.rating[data-rating="4"] span[data-value="4"],
+.rating[data-rating="5"] span[data-value="1"],
+.rating[data-rating="5"] span[data-value="2"],
+.rating[data-rating="5"] span[data-value="3"],
+.rating[data-rating="5"] span[data-value="4"],
+.rating[data-rating="5"] span[data-value="5"] {
+  color: rgb(227, 200, 24);
+}
+footer,
+.p1 {
+  background-color: #053053;
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+
+.container1 {
+  text-align: center;
+  background-color: white;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.main-content p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: #000000;
+  margin: 20px 0;
+  text-align: justify;
+}
+.main-content p strong {
+  font-size: 1.2em;
+  font-weight: "Times New Roman", Times, serif;
+  color: #000000;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-image {
+  width: 3px;
+  margin-bottom: 50px;
+}
+.course-box,
+.info-box {
+  background-color: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.course-box {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.course-text {
+  flex: 1;
+  text-align: justify;
+}
+
+.course-image {
+  width: 200px;
+  height: auto;
+  margin-left: 20px;
+}
+.grid-container1,
+.main-content,
+.sidebar3 {
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+}
+.comment-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+.comment-box p {
+  font-size: 0.9em;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.comment-image2 {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 100%;
+  margin-bottom: 3%;
+}
+
+/* Estilo básico para el modal */
+.modal {
+  display: none; /* Por defecto el modal está oculto */
+  position: fixed;
+  z-index: 1; /* Está por encima del contenido */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+}
+
+.modal-contenido {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 400px;
+}
+
+.cerrar {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.imagen {
+  cursor: pointer;
+  width: 70%; /* Tamaño de la imagen */
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+/* Estilo para el fondo de carga */
+#loadingWrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: #053053;
+}
+
+/* Estilo para el contenedor de los círculos */
+#loadingWrap #circleG {
+  width: 149px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -16px;
+  margin-left: -74.5px;
+  display: flex; /* Usamos flexbox para alinear los círculos horizontalmente */
+}
+
+/* Estilo para los círculos individuales */
+#loadingWrap #circleG .circleG {
+  background-color: #dce2e8;
+  width: 32px;
+  height: 32px;
+  margin-left: 17px;
+  border-radius: 50%; /* Redondeamos los círculos */
+  animation: bounce_circleG 0.9s infinite linear; /* Aplica la animación */
+}
+
+/* Animación de rebote */
+@keyframes bounce_circleG {
+  0% {
+    transform: translateY(0); /* Empieza en su posición original */
+  }
+  50% {
+    transform: translateY(-20px); /* Se mueve hacia arriba */
+  }
+  100% {
+    transform: translateY(0); /* Vuelve a su posición original */
+  }
+}
+
+/* Retrasos para cada círculo para que no se muevan al mismo tiempo */
+#loadingWrap #circleG #circleG_1 {
+  animation-delay: 0.5s;
+}
+
+#loadingWrap #circleG #circleG_2 {
+  animation-delay: 0.42s;
+}
+
+#loadingWrap #circleG #circleG_3 {
+  animation-delay: 0.54s;
+}
+
+
+
+/* Estilos básicos */
+
+.container1 {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  background-color: #ffffff;
+}
+.container2 {
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+}
+/* BACKGROUND POLITICAS */
+.container3 {
+  width: 100%;
+  padding: 20px;
+  background-color: #cecdcd;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.support-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+.column {
+  width: 30%;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.column h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.social-links a {
+  display: block;
+  text-decoration: none;
+  color: #474748;
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.social-links a i {
+  margin-right: 8px; /* Espacio entre el icono y el texto */
+  font-size: 20px; /* Tamaño del icono */
+}
+
+.social-links a:hover {
+  color: #053053;
+}
+
+.contact-info p,
+.privacy-policy p {
+  font-size: 16px;
+}
+
+/* Estilo para los iconos en los contactos */
+.contact-info i,
+.privacy-policy i {
+  margin-right: 10px; /* Espacio entre el icono y el texto */
+  color: #484747; /* Color de los iconos */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Estilos para la página de Política de Privacidad */
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #020202;
+}
+
+h3 {
+  color: #080808;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+p,
+ul {
+  font-size: 16px;
+  color: #060606;
+}
+
+ul {
+  margin-left: 20px;
+}
+
+a {
+  color: #053053;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* iniciarsesion */
+
+/* Estilo para el formulario */
+.form-container5 {
+  display: flex; /* Establece los elementos en una fila */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  background-color: white; /* Fondo común para el contenedor */
+  padding: 20px;
+  border-radius: 8px; /* Bordes redondeados */
+ width: 100%;
+  gap: 20px; /* Espacio entre el formulario y la imagen */
+}
+
+/* Estilo para el formulario */
+.login-form {
+  width: 80%; /* Ajusta el tamaño del formulario */
+  padding: 20px;
+  border-radius: 8px;
+  background-color:white; /* Fondo del formulario */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  text-align: center;
+}
+
+/* Estilo para los campos de entrada del formulario */
+.login-form input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Estilo para el botón de inicio de sesión */
+.login-form button {
+  width: 80%;
+  padding: 10px;
+  background-color: #053053;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
+}
+/*SUSCRIBIRSE */
+.subscribe-form {
+  display: flex; /* Usamos Flexbox */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  width: 98%; /* Ajusta el tamaño del formulario al 100% del ancho disponible */
+   padding: 20px;
+  border-radius: 8px;
+  background-color: white ; /* Fondo del formulario */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* REGISTRARSE */
+
+.register-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.register-link a {
+  color: #053053;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para el Modal */
+.modal {
+  display: none; /* Inicialmente oculto */
+  position: fixed; /* Fijo en la pantalla */
+  z-index: 1; /* En primer plano */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro transparente */
+ 
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 20%;
+
+justify-items: center;
+
+}
+
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  float: right;
+  cursor: pointer;
+ 
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* finaliza sesion */
+
+/* Estilo para el botón de desplazamiento */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.btn1 {
+  background-color: #053053;
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+
+.btn1:hover {
+  background-color: #ccc;
+}
+
+.fas {
+  font-size: 20px;
+}
+
+/* publicidad */
+.imagenespubli {
+  width: 47%;
+
+  display: flex; /* Para que las imágenes estén una al lado de la otra */
+}
+
+.imagenespubli {
+  animation: parpadeo 5s ;
+  margin: 10px;
+}
+
+
+/* publicidad */
+.imagenespubli2 {
+  width: 47%;
+height: 10%;
+  display: flex; /* Para que las imágenes estén una al lado de la otra */
+}
+
+.imagenespubli2 {
+  animation: parpadeo 5s ;
+  margin: 10px;
+}
+
+
+/* publicidad */
+.imagenespubli3 {
+  width: 30%;
+height: auto;
+  display: flex; /* Para que las imágenes estén una al lado de la otra */
+}
+
+.imagenespubli3 {
+  animation: parpadeo 5s ;
+  margin: 10px;
+}
+
+
+@keyframes parpadeo {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+/* Estilos para el botón */
+.center-button {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+}
+
+button {
+  background-color: #053053;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 10%;
+  }
+
+button:hover {
+  background-color: #09406d;
+  
+}
+
+/* Estilos para el modal */
+.modal {
+  display: none; /* El modal está oculto por defecto */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro */
+  
+}
+
+/* Contenido del modal */
+.modal-content3 {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  align-items: center;
+  text-align: center;
+}
+
+/* Botón para cerrar el modal */
+.close-btn {
+  color: #0b0b0b;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  }
+
+/* Estilos para el formulario */
+form {
+ 
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+  
+}
+
+label {
+  margin-top: 10px;
+}
+
+input {
+  padding: 8px;
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+
+}
+
+button[type="submit"] {
+  background-color: #053053;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+ 
+  }
+
+button[type="submit"]:hover {
+  background-color: #09406d;
+ 
+}
+
+/* Estilos para pantallas grandes (escritorio) */
+body {
+  font-size: 16px;
+}
+
+/* Media query para dispositivos con pantallas de hasta 768px (tabletas) */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .container {
+    width: 90%; /* Ajustar el tamaño de los elementos */
+  }
+  .header {
+    text-align: center;
+  }
+}
+
+/* Media query para dispositivos móviles con pantallas de hasta 480px */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+  .container {
+    width: 100%;
+  }
+  .header {
+    font-size: 18px;
+  }
+  .menu {
+    display: block;
+  }
+}
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Para que los elementos puedan saltar a la siguiente línea si es necesario */
+}
+
+.item {
+  flex: 1 1 100%; /* Por defecto, los elementos ocuparán el 100% del ancho en pantallas pequeñas */
+}
+
+@media screen and (min-width: 768px) {
+  .item {
+    flex: 1 1 48%; /* En pantallas más grandes, cada ítem ocupará el 48% */
+  }
+}

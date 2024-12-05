@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos.css" />
+    <title>Iniciarsesion</title>
+    <link rel="shortcut icon" href="imagenes/LOGO.png" />
+    <!-- SOPORTE Y CONTACTO -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="estilos.css" />
+    <style>
+      /* Hacer el desplazamiento suave */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <div class="logo-container">
+        <a href="https://www.youtube.com/watch?v=9g4rmYztqQI" target="_blank">
+          <img src="imagenes/LOGO.png" alt="Logo de la página" id="logo" />
+        </a>
+        <link rel="stylesheet" href="styles.css" />
+      </div>
+      <div id="header"></div>
+    </header>
+    <div class="banner">
+      <img
+        src="imagenes/NER.png"
+        alt="Banner de Tecnoeducación"
+        loading="lazy"
+      />
+
+      <div class="center-content">
+        <h1>NOTIMARKETING</h1>
+        <hr class="underline">
+        </div>
+  
+     
+
+
+
+
+      <!-- Formulario de inicio de sesión -->
+      <div class="form-container5" id="login-form">
+        <form action="#" method="POST">
+          <h2>Iniciar sesión</h2>
+          <input type="text" id="username" placeholder="Usuario" required />
+          <input
+            type="password"
+            id="password"
+            placeholder="Contraseña"
+            required
+          />
+          <button type="submit">Iniciar sesión</button>
+
+          
+          <div class="register-link"><section id="Registrarse"></section>
+            <p>
+              Aún no estás registrado?
+              <a href="#" onclick="openModal()">Haz clic aquí</a>
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <div class="imagenespubli2">
+        <img src="imagenes/IM20.jpg" alt="Imagen 11" class="imagen">
+       <img src="imagenes/IM22.jpg" alt="Imagen 11" class="imagen">
+       <img src="imagenes/IM21.jpg" alt="Imagen 12" class="imagen">
+   </div>
+
+
+
+     <section id="Suscribirse"></section>
+    <div class="subscribe-form">
+     
+      <form action="#" method="POST">
+        <h2>Suscríbete</h2>
+        <input
+          type="email"
+          id="email"
+          placeholder="Introduce tu email"
+          required
+        />
+        <button type="submit">Suscribirse</button>
+      </form>
+    </div>
+
+    <!-- Modal para registro -->
+    
+    <div id="register-modal" class="modal">
+      <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Registrarse</h2>
+        <form1 action="#" method="POST">
+          <input
+            type="text"
+            id="full-name"
+            placeholder="Nombre completo"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            placeholder="Correo electrónico"
+            required
+          />
+          <input type="text" id="new-username" placeholder="Usuario" required />
+          <input
+            type="password"
+            id="new-password"
+            placeholder="Contraseña"
+            required
+          />
+          <button type="submit">Registrarse</button>
+        </form1>
+      </div>
+    </div>
+
+    <script>
+      // Función para abrir el modal
+      
+      function openModal() {
+        document.getElementById("register-modal").style.display = "block";
+      }
+
+      // Función para cerrar el modal
+      function closeModal() {
+        document.getElementById("register-modal").style.display = "none";
+      }
+
+      // Opcional: Función para enviar el formulario de inicio de sesión y el formulario de registro
+      document.querySelector("#login-form form").onsubmit = function (e) {
+        e.preventDefault();
+        alert("Iniciando sesión...");
+        // Aquí puedes agregar la lógica para el inicio de sesión.
+      };
+
+      document.querySelector("#register-modal form").onsubmit = function (e) {
+        e.preventDefault();
+        alert("Registrando usuario...");
+        // Aquí puedes agregar la lógica para el registro.
+      };
+    </script>
+
+
+ 
+  <!-- Botón con el ícono de flecha hacia arriba -->
+  <div class="scroll-to-top">
+    <button class="btn1" onclick="scrollToTop()">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div>
+
+  <!-- Enlazamos el archivo de JavaScript -->
+  <script src="subir.js"></script>
+
+
+
+    <h2>Soporte y Contacto</h2>
+    <div class="support-columns">
+      <!-- Columna 1: Redes Sociales -->
+
+      <div class="column">
+        <h3>Redes Sociales</h3>
+        <div class="social-links">
+          <a href="https://www.instagram.com/tu_instagram" target="_blank"
+            ><i class="fab fa-instagram"></i> Instagram</a
+          >
+          <a
+            href="https://www.facebook.com/profile.php?id=61569089340989&mibextid=ZbWKwL"
+            target="_blank"
+            ><i class="fab fa-facebook"></i> Facebook</a
+          >
+          <a
+            href="https://x.com/Notimarketing24?t=sXgbpjKY_WadcZaYyf99_w&s=08"
+            target="_blank"
+            ><i class="fab fa-twitter"></i> Twitter</a
+          >
+        </div>
+      </div>
+
+      <!-- Columna 2: Medio de Contacto -->
+      <div class="column">
+        <h3>Contacto</h3>
+        <div class="contact-info">
+          <p>
+            <strong><i class="fas fa-envelope"></i> Email:</strong>
+            <a href="mailto:Notimarketing24@gmail.com"
+              >Notimarketing2024@gmail.com</a
+            >
+          </p>
+          <p>
+            <strong><i class="fas fa-phone-alt"></i> Teléfono:</strong> +57 600
+            123 456
+          </p>
+        </div>
+      </div>
+
+      <!-- Columna 3: Políticas de Privacidad -->
+      <div class="column">
+        <h3>Política de Privacidad</h3>
+        <div class="privacy-policy">
+          <p>
+            Tu privacidad es importante para nosotros. Para obtener más
+            información sobre cómo protegemos tus datos personales, lee nuestra
+            <a href="politicas.html" target="_blank"
+              ><i class="fas fa-shield-alt"></i> Política de Privacidad</a
+            >.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aquí se cargará el footer -->
+    <div id="footer"></div>
+
+    <!-- Script para cargar el header y el footer -->
+    <script src="load-header-footer.js"></script>
+  </body>
+</html>
